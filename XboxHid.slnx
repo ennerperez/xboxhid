@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/XboxHid.Overlay/XboxHid.Overlay.csproj" />
+    <Project Path="src/XboxHid/XboxHid.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/XboxHid.Tests/XboxHid.Tests.csproj" />
+  </Folder>
+</Solution>

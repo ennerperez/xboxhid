@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:XboxHid.Overlay"
+        x:Class="XboxHid.Overlay.VirtualKeyboardWindow"
+        Title="XboxHid Virtual Keyboard"
+        Background="Transparent"
+        TransparencyLevelHint="Transparent"
+        WindowDecorations="None"
+        CanResize="False"
+        ShowInTaskbar="False"
+        ShowActivated="False"
+        Topmost="True">
+  <Border Padding="20" CornerRadius="18" Background="#F0161D29"
+          BorderBrush="#7058D9F9" BorderThickness="1.5">
+    <StackPanel Spacing="10">
+      <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="16">
+        <TextBlock x:Name="TitleText" FontSize="24" FontWeight="Bold" Foreground="White"
+                   VerticalAlignment="Center" TextWrapping="Wrap" />
+        <TextBlock x:Name="PreviewText" Grid.Column="1" FontSize="48" FontWeight="Bold"
+                   Foreground="#62E6FF" VerticalAlignment="Center" TextWrapping="Wrap" />
+        <TextBlock x:Name="LayerText" Grid.Column="2" FontSize="13" FontWeight="Bold"
+                   Foreground="#C597FF" VerticalAlignment="Center" TextWrapping="Wrap" />
+      </Grid>
+      <local:DaisyWheelControl x:Name="DaisyWheel" HorizontalAlignment="Stretch" />
+      <UniformGrid x:Name="GroupsGrid" Columns="4" Rows="2" />
+      <TextBlock x:Name="StatusText" FontSize="14" Foreground="#B6C2D1"
+                 VerticalAlignment="Center" TextWrapping="Wrap" />
+      <TextBlock FontSize="12" Foreground="#8190A3" VerticalAlignment="Center" TextWrapping="Wrap"
+                 Text="D-pad: ← borrar  ↓ espacio  → Enter  ↑ letras/números   |   Back: ocultar" />
+    </StackPanel>
+  </Border>
+</Window>

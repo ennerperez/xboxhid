@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat code coverage">
+        <Configuration>
+          <Format>cobertura</Format>
+          <!-- Native OS/SDL adapters and visual Avalonia surfaces need integration/UI tests.
+               Unit coverage measures deterministic mapping, configuration and input logic. -->
+          <ExcludeByFile>**/Program.cs,**/SdlGamepadSource.cs,**/MouseControllers.cs,**/AvaloniaOverlay.cs,**/App.axaml.cs,**/VirtualKeyboardWindow.axaml.cs,**/DaisyWheelControl.axaml.cs,**/*.axaml</ExcludeByFile>
+          <ExcludeByAttribute>ExcludeFromCodeCoverageAttribute,GeneratedCodeAttribute,CompilerGeneratedAttribute</ExcludeByAttribute>
+          <SkipAutoProps>true</SkipAutoProps>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>
